@@ -1,0 +1,857 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Montserrat';
+}
+* {
+    box-sizing: border-box;
+    transition: .3s ease-in-out;
+}
+ul, li, p, a, button, h1, h2, h3, h4, h5, h6, img {
+    padding: 0;
+    margin: 0;
+    color: #fff;
+    text-decoration: none;
+}
+.pos-rel {
+    position: relative;
+}
+h2 {
+    text-align: center;
+    padding-bottom: var(--heading-padding-bottom);
+    font-size: var(--heading-font-size);
+}
+h2 {
+    font-size: 1.7rem;
+}
+.backgroundTxt {
+    display: none;
+}
+.color-gold {
+    color: var(--golden-color);
+}
+.backgroundTxt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    color: #81818138 !important;
+    font-size: 16.6rem;
+    font-weight: 600;
+    overflow: hidden;
+    text-transform: uppercase;
+    filter: var(--text-blurred);
+    user-select: none;
+    pointer-events: none;
+    text-shadow: 
+        -1px -1px 0 var(--golden-color), 
+        1px -1px 0 var(--golden-color), 
+        -1px 1px 0 var(--golden-color), 
+        1px 1px 0 var(--golden-color);
+    font-size: clamp(50px, 13vw, 300px);
+}
+.m-l {
+    margin-left: 260px;
+}
+.jc-sa {
+    justify-content: space-around;
+}
+.color-white {
+    color: white;
+}
+:root {
+    --section-padding: 70px 0;
+    --golden-color: #FFD700;
+    --logo-pic-size: 50px;
+    --background-repeat: no-repeat;
+    --background-size: cover;
+    --grey-color: #818181;
+    --heading-font-size: 3rem;
+    --heading-padding-bottom: 70px;
+    --text-blurred: blur(5px);
+}
+
+
+/* header */
+.header, .main .introBlock {
+    background-image: url(../img/bgPics/headerBg.png);
+    background-repeat: var(--background-repeat);
+    background-size: var(--background-size);
+    padding: var(--section-padding);
+    background-color: #000;
+}
+.header ul {
+    list-style: none;
+}
+.header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 100%;
+}
+.header .logo img {
+    width: var(--logo-pic-size);
+    height: var(--logo-pic-size);
+    border-radius: 5em;
+    border: 1px solid var(--golden-color);
+    margin-right: 15px;
+}
+.header .logo p {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--golden-color);
+}
+.header .menu {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 50px;
+}
+.header .menu .menuList {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 0 8px;
+}
+.header .menu .menuList li {
+    margin-bottom: 20px;
+}
+.header .menu .menuList li a {
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 8px 34px;
+    border: 3px solid #818181;
+    border-radius: 5em;
+    display: block;
+}
+.header .menu .menuList li a:hover {
+    border: 3px solid var(--golden-color);
+}
+.socialMedia {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.socialMedia a img {
+    width: 40px;
+}
+
+
+/* .main */
+/* introBlock */
+.main .introBlock .introBlockWrp {
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+.main .introBlock .introBlockWrp .introInfo {
+    display: flex;
+    padding: 0 20px;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main .introBlock .introBlockWrp .introInfo h1 {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.main .introBlock .introBlockWrp .introInfo p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.main .introBlock .introBlockWrp .introInfo p span {
+    color: var(--grey-color);
+}
+.main .introBlock .introBlockWrp .imageWrp {
+    display: none;
+}
+.main .introBlock .linkWrp {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.main .introBlock .linkWrp a {
+    padding: 12px 60px;
+    border-radius: 5em;
+    font-size: 1.4rem;
+    text-shadow: 1px 2px 5px black;
+    background: var(--golden-color);
+    border: 1px solid transparent;
+}
+.main .introBlock .linkWrp a:hover {
+    background-color: transparent;
+    border: 1px solid var(--golden-color);
+}
+
+/* aboutUsBlock */
+.main .aboutUsBlock {
+    padding: var(--section-padding);
+    background: linear-gradient(180deg, transparent 1%, #3b3b3b 30%);
+    padding-top: 410px;
+    margin-top: -400px;
+    position: relative;
+}
+.main .aboutUsBlock .backgroundTxt {
+    font-size: clamp(50px, 14vw, 300px);
+}
+.main .aboutUsBlock .backgroundTxt .wrapper {
+    line-height: 270px;
+}
+.main .aboutUsBlock .infoWrp {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.main .aboutUsBlock .infoWrp img {
+    margin-bottom: 20px;
+    width: 110px;
+}
+.main .aboutUsBlock .infoWrp p {
+    font-size: 1rem;
+}
+
+
+
+
+/* advantagesBlock */
+.main .advantagesBlock {
+    padding: var(--section-padding);
+    background-color: #3B3B3B;
+    position: relative;
+}
+.main .advantagesBlock .backgroundTxt {
+    padding-top: 130px;
+    color: #3c3b3b !important;
+}
+.main .advantagesBlock .backgroundTxt .wrapper {
+    text-align: center;
+}
+.main .advantagesBlock .advantagesWrp {
+    border-radius: 3em;
+    border: 3px solid var(--golden-color);
+    padding: 16px 44px;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+.main .advantagesBlock .advantagesWrp p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+/* servicesBlock */
+.main .servicesBlock {
+    padding: var(--section-padding);
+    background: linear-gradient(180deg, transparent 1%, #000 10%);
+    padding-top: 456px;
+    margin-top: -444px;
+    position: relative;
+}
+.main .servicesBlock .backgroundTxt{
+    padding-top: 400px;
+    color: #171717 !important;
+}
+.main .servicesBlock .backgroundTxt .wrapper {
+    text-align: center;
+    line-height: 270px;
+}
+.main .servicesBlock .servicesWrp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-bottom: 50px;
+    padding: 0 10px;
+}
+.main .servicesBlock .servicesWrp .serviceType {
+    text-align: center;
+    backdrop-filter: blur(5px);
+    border: 1px solid var(--golden-color);
+    border-radius: 2em;
+    padding: 30px 20px;
+    background-color: #d8d8d84d;
+    min-height: 470px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 65px;
+}
+.main .servicesBlock .servicesWrp .serviceType h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.main .servicesBlock .servicesWrp .serviceType .additionalInfo {
+    display: flex; 
+    align-items: center;
+    flex-wrap: nowrap;
+    text-align: left;
+    padding: 0 20px;
+}
+.main .servicesBlock .servicesWrp .serviceType .additionalInfo ul {
+    padding-right: 12px; 
+}
+.main .servicesBlock .servicesWrp .serviceType .additionalInfo ul li {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.main .servicesBlock .servicesWrp .serviceType .additionalInfo img {
+    width: 130px;
+}
+.main .servicesBlock .servicesWrp .serviceType button {
+    padding: 15px 65px;
+    border-radius: 5em;
+    border: 2px solid #3b3b3b;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: linear-gradient(145deg, #2d2d2d, #1e1e1e);
+    box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #2a2a2a;
+}
+.main .servicesBlock .servicesWrp .serviceType button:hover {
+    color: #1e1e1e;
+    background: white;
+    border: 2px solid #3B3B3B;
+}
+.main .servicesBlock .arrow {
+    margin-bottom: 65px;
+}
+.main .servicesBlock .serviceAdvantages p {
+    border: 3px solid var(--golden-color);
+    padding: 25px 30px;
+    border-radius: 2em;
+    margin-bottom: 60px;
+    backdrop-filter: blur(25px);
+    background: linear-gradient(145deg, #2d2d2d, #1e1e1e);
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+
+.main .highlightBlock {
+    z-index: 2;
+    position: relative;
+    background-image: url(../img/bgPics/highlightBg.jpg);
+    background-repeat: var(--background-repeat);
+    background-size: var(--background-size); 
+    padding: 40px 0;
+    background-color: #000;
+}
+
+/* portfolioBlock */
+.main .portfolioBlock {
+    padding: 0 50px;
+    margin-bottom: 150px;
+}
+.main .portfolioBlock .portfolioWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.portfolioBlock .portfolioWrapper .firstPortfolio img, .portfolioBlock .portfolioWrapper .secondPortfolio img, .portfolioBlock .portfolioWrapper .thirdPortfolio img{
+    border-radius: 24px;
+    border: 2px solid white;
+    max-height: max-content;
+}
+.main .portfolioBlock .portfolioWrapper .firstPortfolio { 
+    grid-area: 1 / 1 / 6 / 3; 
+}
+.main .portfolioBlock .portfolioWrapper .secondPortfolio { 
+    grid-area: 1 / 4 / 3 / 6; 
+}
+.main .portfolioBlock .portfolioWrapper .thirdPortfolio { 
+    grid-area: 3 / 4 / 6 / 6; 
+}
+.main .portfolioBlock .portfolioWrapper a img {
+    filter: grayscale(100%);
+    transition: filter 0.5s ease;
+} 
+.main .portfolioBlock .portfolioWrapper a img:hover {
+    filter: grayscale(0%);
+} 
+
+/* formBlock */
+
+.main .formBlock .formWrp {
+    margin: 0 auto;
+    border: 1px solid white;
+    padding: 40px 20px;
+    width: clamp(300px, 50vw, 550px);
+    text-align: left;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    color: white;
+    background-color: #F4F4F466;
+}
+.main .formBlock .formWrp input, .main .formBlock .formWrp button, .main .formBlock .formWrp textarea {
+    display: block;
+    margin: 10px auto;
+    width: 100%;
+}
+.main .formBlock .formWrp label {
+    display: block;
+}
+.main .formBlock .formWrp input {
+    margin-bottom: 50px !important;
+    margin: 0 auto;
+    background-color: transparent;
+    border-bottom: 2px solid white !important;
+    color: white;
+    border: none;
+    padding: 0;
+}
+.main .formBlock .formWrp input:focus-visible, .main .formBlock .formWrp textarea:focus-visible {
+    border-bottom: 2px solid var(--golden-color) !important;
+    outline: none;
+}
+.main .formBlock .formWrp label:has(+ input:focus-visible), .main .formBlock .formWrp label:has(+ textarea:focus-visible) {
+    color: var(--golden-color);
+}
+input:-webkit-autofill, 
+textarea:-webkit-autofill {
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset !important;
+    -webkit-text-fill-color: white !important;
+    color: white !important;
+    transition: background-color 5000s ease-in-out 0s; /* Задержка изменения фона  */
+    caret-color: white !important; /* Белый курсор */
+}
+.main .formBlock .formWrp textarea:focus-visible {
+    border: 2px solid var(--golden-color) !important;
+    outline: none;
+}
+.main .formBlock .formWrp textarea {
+    background-color: transparent;
+    border: 2px solid white !important;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 5px;
+    outline: 0;
+    resize: none;
+    height: 100px;
+    margin-bottom: 40px;
+}
+.main .formBlock .formWrp textarea::placeholder {
+    color: white;
+}
+.main .formBlock .formWrp #message::-webkit-scrollbar {
+    width: 6px;
+    border: none;
+}
+.main .formBlock .formWrp #message::-webkit-scrollbar-button:start:decrement, .main .formBlock .formWrp #message::-webkit-scrollbar-button:end:increment {
+    height: 10px;
+}
+.main .formBlock .formWrp #message::-webkit-scrollbar-track {
+    background: transparent;
+}
+.main .formBlock .formWrp #message::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: var(--golden-color);
+    cursor: pointer;
+}
+.main .formBlock .formWrp button {
+    color: #000;
+    font-size: 1.2rem;
+    font-weight: 500;
+    width: 100% !important;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    padding: 8px 25px;
+}
+.main .formBlock .formWrp button {
+    width: 50%;
+}
+.main .formBlock .formWrp button:hover {
+    border: 1px solid var(--golden-color);
+    background-color: transparent;
+    color: var(--golden-color);
+}
+
+
+/* questionsBlock */
+.main .spaceBg {
+    padding: var(--section-padding);
+    background-image: url(../img/bgPics/spaceBg.jpg);
+    background-repeat: var(--background-repeat);
+    background-size: var(--background-size);
+    padding-bottom: 0;
+    background-color: #000;
+}
+.accordion-button::after, .accordion-button:not(.collapsed)::after {
+    background-image: url(../img/additionalPics/whiteAngle.png);
+}
+.accordion-button:focus {
+    box-shadow: none;
+    outline-color: none;
+}
+.main .questionsBlock .accordion-item {
+    margin-bottom: 40px;
+    background-color: #454545;
+    transition: .4s ease-in-out;
+    border-radius: 30px;
+    overflow: hidden;
+    border: 1px solid white !important;
+}
+.main .questionsBlock .accordion-button {
+    background-color: #454545;
+    margin: 0;
+    padding: 20px;
+    border: none;
+}
+.main .questionsBlock .accordion-item .accordion-header {
+    padding: 0;
+}
+.main .questionsBlock .accordion-item .accordion-body {
+    color: white;
+    word-break: break-all;
+}
+.main .questionsBlock .accordion-item .accordion-body ul {
+    padding: 10px;
+    list-style-type: none;
+}
+.main .questionsBlock .accordion-item .accordion-body ul li::before {
+    content: "- ";
+  }
+.main .questionsBlock .backgroundTxt {
+    position: relative;
+    text-align: center;
+    font-size: clamp(50px, 13vw, 300px);
+    filter: blur(2px);
+    white-space: nowrap;
+    color: #1b1b1b !important;
+
+}
+.main .questionsBlock .backgroundTxt .wrapper {
+    text-align: center;
+}
+
+
+
+
+/* .footer */
+.footer {
+    padding: var(--section-padding);
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.footer .policy, .footer .contactsWrp, .footer .description {
+    width: 100%;
+}
+
+
+
+.footer .policy a {
+    display: block;
+    word-break: keep-all;
+    cursor: pointer;
+}
+.footer .policy a:hover {
+    color: white;
+}
+.footer .contactsWrp {
+    text-align: center;
+}
+.footer .contactsWrp .contacts {
+    margin-bottom: 20px;
+}
+.footer .contactsWrp .contacts h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+.footer .contactsWrp .socialMedia {
+    height: unset;
+    width: 80%;
+    margin: 0 auto;
+}
+.footer .description {
+    text-align: right;
+}
+.footer .policy a, .footer .description p {
+    color: #828282;
+}
+.footer .policy, .footer .description {
+    line-height: 30px;
+}
+
+
+
+@media (min-width: 400px) {
+    .main .formBlock .formWrp {
+        padding: 40px 30px;
+        width: clamp(340px, 50vw, 550px);
+    }
+
+}
+
+@media (min-width: 520px) {
+    .header .menu .menuList {
+        padding: 0 25px;
+    }
+
+}
+
+@media (min-width: 550px) {
+    .main .formBlock .formWrp {
+        width: clamp(390px, 50vw, 550px);
+    }
+
+}
+
+
+@media (min-width: 768px) {
+    h2 {
+        font-size: 2.2rem;
+    }
+    .m-b {
+        margin-bottom: 200px;
+    }
+    .backgroundTxt {
+        display: block;
+    }
+
+
+    /* header */
+    .header .menu .menuList li a {
+        font-size: 1.1rem;
+        padding: 8px 28px;
+    }
+    
+
+    /* main */
+    /* introBlock */
+    .main .introBlock .introBlockWrp {
+        margin-bottom: 70px;
+    }
+    .main .introBlock .introBlockWrp .introInfo {
+        padding: 0;
+        align-items: normal;
+    }
+    .main .introBlock .linkWrp a {
+        padding: 12px 120px;
+    }
+    .main .introBlock .introBlockWrp .introInfo h1 {
+        font-size: 2rem;
+    }
+    .main .introBlock .introBlockWrp .introInfo p {
+        font-size: 1rem;
+    }
+    .main .introBlock .introBlockWrp .imageWrp {
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    .main .introBlock .introBlockWrp .imageWrp img {
+        width: 380px;
+        max-width: none;
+    }
+
+    /* aboutUsBlock */
+    .main .aboutUsBlock {
+        padding-top: 320px;
+        margin-top: -255px;
+    }
+    .main .aboutUsBlock .backgroundTxt {
+        padding-top: 333px;
+        text-shadow: none;
+    }
+    .main .aboutUsBlock .infoWrp {
+        margin-bottom: 0;
+    }
+    .main .aboutUsBlock .infoWrp img {
+        margin-bottom: 10px;
+        width: 150px;
+    }
+    .main .aboutUsBlock .infoWrp p {
+        font-size: 1.5rem;
+    }
+    
+
+    /* advantagesBlock */
+    .main .advantagesBlock .advantagesWrp {
+        padding: 16px 65px;
+    }
+    .main .advantagesBlock .advantagesWrp p {
+        font-size: 1.3rem;
+    }
+
+    /* servicesBlock */
+
+    .main .servicesBlock .backgroundTxt {
+        padding-top: 560px;
+    }
+    .main .servicesBlock {
+        padding-top: 520px;
+        margin-top: -470px;
+    }
+    .main .servicesBlock .servicesWrp .serviceType button {
+        font-size: 1.3rem;
+    }
+    .main .servicesBlock .serviceAdvantages p {
+        padding: 38px 15px;
+        font-size: 1.5rem;
+    }
+
+
+    /* portfolioBlock */
+    .main .portfolioBlock {
+        padding: 0 130px;
+    }
+    .main .portfolioBlock .portfolioWrapper {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        gap: 0;
+    }
+    .main .portfolioBlock {
+        margin-bottom: 50px;
+    }
+    .main .formBlock .formWrp {
+        padding: 60px 50px;
+    }
+
+    /* questionsBlock */
+    .main .questionsBlock .accordion-item .accordion-header button {
+        font-size: 1.3rem;
+    }
+
+    /* footer */
+    
+
+    /* contactsWrp */
+    .footer .contactsWrp .contacts h3 {
+        font-size: 1.5rem;
+    }
+    .footer .contactsWrp .socialMedia {
+        width: 60%;
+    }
+    .footer .contactsWrp .socialMedia a img {
+        width: 44px;
+    }
+}
+
+
+@media (min-width: 900px) {
+    h2 {
+        font-size: var(--heading-font-size);
+    }
+    .main .introBlock .introBlockWrp .imageWrp img {
+        width: 470px;
+    }
+
+}
+
+
+@media (min-width: 992px) {
+    /* header */
+    .header .logo {
+        justify-content: flex-start;
+        margin-bottom: 0;
+    }   
+    .header .menu {
+        margin-bottom: 0;
+    }
+    .header .menu .menuList {
+        padding: 0;
+    }
+    .header .menu .menuList li a {
+        padding: 8px 24px;
+        font-size: 0.8rem;
+    }
+    .header .menu .menuList li {
+        margin-bottom: 0;
+    }
+
+
+    .main .introBlock .introBlockWrp .imageWrp img {
+        width: 500px;
+    }
+    .main .introBlock .introBlockWrp .introInfo h1 {
+        font-size: 3.2rem;
+    }
+    .main .introBlock .introBlockWrp .introInfo p {
+        font-size: 1.3rem;
+    }
+}
+ 
+
+@media (min-width: 1050px) {
+    .footer {
+        padding-left: 50px;
+        padding-right: 50px;
+        flex-wrap: nowrap;
+        flex-direction: row;
+    }
+    .footer .policy {
+        width: 30%;
+    }
+    .footer .contactsWrp {
+        width: 41%;
+    }
+    .footer .description {
+        width: 30%;
+    }
+    
+    
+}
+
+
+
+@media (min-width: 1200px) {
+    .header .menu .menuList li a {
+        font-size: 1.1rem;
+        padding: 8px 28px;
+    }
+
+
+    .main .introBlock .introBlockWrp .imageWrp img {
+        width: 600px;
+    }
+    .main .introBlock .introBlockWrp .introInfo h1 {
+        font-size: 4.5rem;
+    }
+    .main .introBlock .introBlockWrp .introInfo p {
+        font-size: 1.5rem;
+    }
+    
+
+    .main .servicesBlock {
+        padding-top: 260px;
+        margin-top: -210px;
+    }
+    .main .servicesBlock .backgroundTxt {
+        padding-top: 420px;
+    }
+} 
+
+@media (min-width: 1330px) {
+    .main .introBlock .introBlockWrp .imageWrp img {
+        width: 700px;
+    }
+    
+} 
