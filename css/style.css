@@ -75,11 +75,13 @@ h2 {
 
 
 /* header */
+.header {
+    padding: var(--section-padding);
+}
 .header, .main .introBlock {
     background-image: url(../img/bgPics/headerBg.png);
     background-repeat: var(--background-repeat);
     background-size: var(--background-size);
-    padding: var(--section-padding);
     background-color: #000;
 }
 .header ul {
@@ -96,7 +98,6 @@ h2 {
     width: var(--logo-pic-size);
     height: var(--logo-pic-size);
     border-radius: 5em;
-    border: 1px solid var(--golden-color);
     margin-right: 15px;
 }
 .header .logo p {
@@ -144,6 +145,9 @@ h2 {
 
 /* .main */
 /* introBlock */
+.main .introBlock {
+    padding: 40px 0 70px 0;
+}
 .main .introBlock .introBlockWrp {
     margin-bottom: 30px;
     overflow: hidden;
@@ -183,11 +187,11 @@ h2 {
     border-radius: 5em;
     font-size: 1.4rem;
     text-shadow: 1px 2px 5px black;
-    background: var(--golden-color);
+    background: linear-gradient(45deg, #FFD700, #FFC107);
     border: 1px solid transparent;
 }
 .main .introBlock .linkWrp a:hover {
-    background-color: transparent;
+    background: transparent;
     border: 1px solid var(--golden-color);
 }
 
