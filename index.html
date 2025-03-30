@@ -145,91 +145,98 @@
         </section>
 
         <section class="servicesBlock">
-            <div class="backgroundTxt">
-                <div class="wrapper">
-                    <span>Aspera <br> Tech</span>
-                </div>
-            </div>
-            <div class="container pos-rel" id="services">
+            <div class="container">
                 <div class="row">
                     <div class="col-12 col-md-12">
                         <h2>Digital-решения для бизнеса</h2>
                     </div>
-                    <div class="col-12 col-xl-4">
-                        <div class="servicesWrp">
-                            <div class="serviceType">
-                                <h3>Сайты</h3>
-                                <div class="additionalInfo">
-                                    <ul>
-                                        <li>Сайт-визитка</li>
-                                        <li>Многостран. сайт</li>
-                                        <li>Интернет-магазин</li>
-                                    </ul>
-                                    <img src="img/additionalPics/laptopIcon.png" class="img-fluid" alt="">
+                </div>
+                <div class="row">
+                    <div class="col-12 col-md-12">
+                        <div class="popup" id="services">
+                            <div class="tabs">
+                    
+                                <input type="radio" id="tab1" name="tab"  class="tabLink active">        
+                                <label for="tab1">Сайты</label>
+                    
+                                <input type="radio" id="tab2" name="tab" class="tabLink">
+                                <label for="tab2">Чат-боты</label>
+                    
+                                <input type="radio" id="tab3" name="tab" class="tabLink">
+                                <label for="tab3">Продвижение</label>
+                    
+                                <div class="marker">
+                                    <div id="top"></div>
+                                    <div id="bottom"></div>
                                 </div>
-                                <button class="serviceInfoBtn">подробнее</button>
+                              
                             </div>
-                            <div class="arrow">
-                                <img src="img/additionalPics/arrow.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="serviceAdvantages">
-                                <p>индивидуальный&nbsp;дизайн</p>
-                                <p>широкий&nbsp;функционал</p>
-                                <p>повышение&nbsp;авторитета</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-4">
-                        <div class="servicesWrp">
-                            <div class="serviceType">
-                                <h3>ЧАТ-БОТЫ</h3>
-                                <div class="additionalInfo">
-                                    <ul>
-                                        <li>Для рассылок</li>
-                                        <li>Для записи на услуги</li>
-                                        <li>Интернет-магазин</li>
-                                    </ul>
-                                    <img src="img/additionalPics/botIcon.png" class="img-fluid" alt="">
+                    
+                            <div class="tabsContent">
+                    
+                                <div id="website" class="tabContent">
+                                    <div class="serviceInfo">
+                                        <h4>Лендинг <span>(HOT!)</span></h4>
+                                        <p>Многостраничный сайт, который часто используют представители среднего и крупного бизнеса, либо продвинутые компании малого бизнеса. Лендинг имеет больше функций, такие как рассчет стоимости продукта, личный кабинет, возможность оставить заявку и многое другое.</p>
+                                    </div>
+                                    
+                                    <div class="serviceInfo">
+                                        <h4>Одностраничный</h4>
+                                        <p>Сайт-визитка, который служит для ознакомления клиента с компанией или экспертом. Основные функции: клиент может оставить заявку, которая придет вам на email. Также на одностраничном сайте можно оставить свои кейсы, контакты, сведения о компании, эксперте или команде.</p>
+                                    </div>
+                                    
+                                    <div class="serviceInfo">
+                                        <h4>Интернет-магазин</h4>
+                                        <p>Многостраничник, который служит удобным местом для продажи вашего продукта непосредственно на сайте. На нем вы можете разместить свои товары/услуги и клиент сможет оплатить и приобрести их напрямую с сайта, вам останется только обработать заявку.</p>
+                                    </div>
+                                    
                                 </div>
-                                <button class="serviceInfoBtn">подробнее</button>
-                            </div>
-                            <div class="arrow">
-                                <img src="img/additionalPics/arrow.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="serviceAdvantages">
-                                <p>автоматизация</p>
-                                <p>доступность</p>
-                                <p>легкость&nbsp;использования</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 col-xl-4">
-                        <div class="servicesWrp">
-                            <div class="serviceType">
-                                <h3>Продвижение</h3>
-                                <div class="additionalInfo">
-                                    <ul>
-                                        <li>SEO-оптимизация</li>
-                                        <li>Реклама (контекст, таргет)</li>
-                                    </ul>
-                                    <img src="img/additionalPics/promotionIcon.png" class="img-fluid" alt="">
+                    
+                                <div id="chatBot" class="tabContent">
+                                    <div class="serviceInfo">
+                                        <h4>Умные рассылки</h4>
+                                        <p>Чат-бот, который предназначен для рассылки сообщений о новостях, акциях, событиях и т.д. пользователям бота. В таком боте как правило есть другие основные функции и воронка сообщений, чтобы привлечь интерес клиента и предложить остаться в списке рассылки, чтобы узнавать о самом интересно быстрее всех.</p>
+                                    </div>
+                                    
+                                    <div class="serviceInfo">
+                                        <h4>Запись на услуги</h4>
+                                        <p>Чат-бот, главная функция которого - записать клиента на услугу или отправить вам оставленную клиентом заявку на покупку продукта. Такой бот часто является доступным и удобным вариантом для интернет-магазинов или агентств, которые продают свои услуги, т.к. это автоматизирует процесс приобретения и оплаты продукта.</p>
+                                    </div>
+                                    
+                                    <div class="serviceInfo">
+                                        <h4>Интернет-магазин</h4>
+                                        <p>Чат-бот, который позволяет вам представить весь ваш ассортимент в одном месте и позволить клиенту легко ознакомиться с вашим продуктом и приобрести его онлайн. Этот бот позволяет вам автоматизировать продажи широкого ассортимента продуктов, а также сэкономить на сайте в виде интернет-магазина, при этом сохранив основные его преимущества.</p>
+                                    </div>
+                                    
                                 </div>
-                                <button class="serviceInfoBtn">подробнее</button>
-                            </div>
-                            <div class="arrow">
-                                <img src="img/additionalPics/arrow.png" class="img-fluid" alt="">
-                            </div>
-                            <div class="serviceAdvantages">
-                                <p>рост&nbsp;продаж</p>
-                                <p>увеличение&nbsp;узнаваемости</p>
-                                <p>постоянный&nbsp;поток&nbsp;клиентов</p>
+                    
+                                <div id="promotion" class="tabContent">
+                                    <div class="serviceInfo">
+                                        <h4>SEO-продвижение</h4>
+                                        <p>SEO помогает вашему сайту занять высокие позиции в поисковых системах, привлекая бесплатный трафик из Google и Яндекса. Это идеальный вариант для долгосрочного роста бизнеса, увеличения числа заявок и повышения доверия клиентов. Мы улучшим ваш сайт, чтобы он работал на вас 24/7.</p>
+                                    </div>
+                                    
+                                    <div class="serviceInfo">
+                                        <h4>Контекстная реклама</h4>
+                                        <p>Это быстрый способ привлечь клиентов через Google и Яндекс. Ваше объявление показывается людям, которые уже ищут ваши товары или услуги, что дает мгновенные заявки и продажи. Мы настраиваем рекламу так, чтобы каждый вложенный рубль приносил результат.</p>
+                                    </div>
+                                    
+                                    <div class="serviceInfo">
+                                        <h4>Таргетированная реклама</h4>
+                                        <p>Помогает находить вашу аудиторию в соцсетях (Instagram, ВКонтакте, Facebook). 
+                                        Мы точно настраиваем объявления по интересам и поведению пользователей, чтобы привлекать клиентов, готовых купить. Подходит для увеличения продаж, роста узнаваемости бренда и привлечения новых подписчиков.</p>
+                                    </div>
+                                    
+                                </div>
+                              
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            
+        
         </section>
-
         
         <section class="highlightBlock">
             <section class="portfolioBlock" id="portfolio">
@@ -402,6 +409,9 @@
             </section>
         </div>
     </section>
+
+
+    
 
     <script src="js/bootstrap.min.js"></script>
     <script src="js/script.js"></script>
