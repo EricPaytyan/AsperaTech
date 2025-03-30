@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* html, body {
+    height: 100%;
+    width: 100%;
+} */
+
 body {
     font-family: 'Montserrat';
+    background-color: #000;
 }
 * {
     box-sizing: border-box;
@@ -255,97 +261,120 @@ h2 {
 .main .servicesBlock {
     padding: var(--section-padding);
     background: linear-gradient(180deg, transparent 1%, #000 10%);
-    padding-top: 456px;
-    margin-top: -444px;
+    padding-top: 156px;
+    margin-top: -100px;
+    margin-bottom: 50px;
+    position: relative;
+} 
+.servicesBlock .popup {
+    display: flex;
+    width: 90%;
+    height: 80%;
+    min-height: 550px;
+    max-height: 550px;
+    border-radius: 48px;
+    box-sizing: border-box; 
+    border: 16px solid #ebf0f4;
+    background-color: #dfe6ed;
+    overflow: hidden;
+    box-shadow: 16px 16px 48px #2e364330; 
+    font-family: monospace; 
+    margin: 0 auto;
+}
+.servicesBlock .popup .tabs{
+    width: 74%;
+    max-width: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     position: relative;
 }
-.main .servicesBlock .backgroundTxt{
-    padding-top: 400px;
-    color: #171717 !important;
-}
-.main .servicesBlock .backgroundTxt .wrapper {
-    text-align: center;
-    line-height: 270px;
-}
-.main .servicesBlock .servicesWrp {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    margin-bottom: 50px;
-    padding: 0 10px;
-}
-.main .servicesBlock .servicesWrp .serviceType {
-    text-align: center;
-    backdrop-filter: blur(5px);
-    border: 1px solid var(--golden-color);
-    border-radius: 2em;
-    padding: 30px 20px;
-    background-color: #d8d8d84d;
-    min-height: 470px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 65px;
-}
-.main .servicesBlock .servicesWrp .serviceType h3 {
-    font-size: 1.8rem;
+.servicesBlock .popup .tabs label {
+    font-size: 19px;
     font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    cursor: pointer;
+    color: #000;
+    opacity: .4;
+    transition: opacity .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    width: calc(100% - 60px);
+    z-index: 100;
+    user-select: none;
+    margin-left: 15px;
+    height: 30%;
+    word-break: break-all;
 }
-.main .servicesBlock .servicesWrp .serviceType .additionalInfo {
+.servicesBlock .popup .tabs input[type="radio"]{
+    display: none;
+}
+.popup .tabs .marker {
+    position: absolute; 
+    width: 100%;
+    height: 200%;
     display: flex; 
-    align-items: center;
-    flex-wrap: nowrap;
-    text-align: left;
-    padding: 0 20px;
+    flex-direction: column;
+    top: calc(-100% );
+    left: 0;
+    transition: transform .2s ease-in-out; 
 }
-.main .servicesBlock .servicesWrp .serviceType .additionalInfo ul {
-    padding-right: 12px; 
+.marker #bottom, .marker #top{
+    background-color: #ebf0f4;
+    box-shadow: 32px 32px 48px #2e364315; 
 }
-.main .servicesBlock .servicesWrp .serviceType .additionalInfo ul li {
-    font-size: 1.2rem;
-    font-weight: 500;
+.marker #top{
+    height: calc(50%);
+    margin-bottom: auto; 
+    border-radius: 0 0 32px 0; 
+}
+.marker #bottom{
+    height: calc(50% - 185px);
+    border-radius: 0 32px 0 0;
+}
+
+#tab1:checked ~ .marker { transform: translateY(calc(calc(50% / 3) * 0));}
+
+#tab2:checked ~ .marker { transform: translateY(calc(calc(50% / 3) * 1));}
+
+#tab3:checked ~ .marker { transform: translateY(calc(calc(50% / 3) * 2));}
+
+.servicesBlock .popup .tabsContent {
+    padding: 20px;
+    width: 100%;
+    overflow: scroll;
+    scrollbar-color: #ffd700 #ffd700;
+    scrollbar-width: thin;
+}
+.servicesBlock .popup .tabContent {
+    display: none;
+}
+.servicesBlock .popup .tabContent.active {
+    display: block;
+}
+.servicesBlock .popup .tabContent .serviceInfo {
     margin-bottom: 20px;
 }
-.main .servicesBlock .servicesWrp .serviceType .additionalInfo img {
-    width: 130px;
+.servicesBlock .popup .tabContent .serviceInfo:last-child {
+    margin-bottom: 0;
 }
-.main .servicesBlock .servicesWrp .serviceType button {
-    padding: 15px 65px;
-    border-radius: 5em;
-    border: 2px solid #3b3b3b;
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    background: linear-gradient(145deg, #2d2d2d, #1e1e1e);
-    box-shadow: 5px 5px 10px #1a1a1a, -5px -5px 10px #2a2a2a;
+.servicesBlock .popup .tabsContent h4 {
+    color: #000;
+    word-break: break-all;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
 }
-.main .servicesBlock .servicesWrp .serviceType button:hover {
-    color: #1e1e1e;
-    background: white;
-    border: 2px solid #3B3B3B;
+.servicesBlock .popup .tabsContent h4 span {
+    color: var(--golden-color);
+    font-weight: 900;
+    font-size: 1.8rem;
+    word-break: keep-all;
 }
-.main .servicesBlock .arrow {
-    margin-bottom: 65px;
-}
-.main .servicesBlock .serviceAdvantages p {
-    border: 3px solid var(--golden-color);
-    padding: 25px 30px;
-    border-radius: 2em;
-    margin-bottom: 60px;
-    backdrop-filter: blur(25px);
-    background: linear-gradient(145deg, #2d2d2d, #1e1e1e);
-    font-size: 1rem;
-    text-align: center;
-    font-weight: 600;
+.servicesBlock .popup .tabsContent p {
+    color: #000;
+
 }
 
-
-
+/* highlightBlock */
 .main .highlightBlock {
     z-index: 2;
     position: relative;
@@ -703,22 +732,18 @@ textarea:-webkit-autofill {
     }
 
     /* servicesBlock */
-
-    .main .servicesBlock .backgroundTxt {
-        padding-top: 560px;
+    .servicesBlock .popup .tabs label {
+        font-size: 24px;
+        width: calc(100% - 48px);
+        margin-left: 40px;
     }
     .main .servicesBlock {
-        padding-top: 520px;
-        margin-top: -470px;
+        padding-top: 150px;
+        margin-top: -120px;
     }
-    .main .servicesBlock .servicesWrp .serviceType button {
-        font-size: 1.3rem;
+    .servicesBlock .popup .tabs{
+        width: 100%;
     }
-    .main .servicesBlock .serviceAdvantages p {
-        padding: 38px 15px;
-        font-size: 1.5rem;
-    }
-
 
     /* portfolioBlock */
     .main .portfolioBlock {
@@ -743,9 +768,6 @@ textarea:-webkit-autofill {
     .main .questionsBlock .accordion-item .accordion-header button {
         font-size: 1.3rem;
     }
-
-    /* footer */
-    
 
     /* contactsWrp */
     .footer .contactsWrp .contacts h3 {
@@ -824,7 +846,11 @@ textarea:-webkit-autofill {
     
 }
 
-
+@media (min-width: 1100px) {
+    .servicesBlock .popup .tabsContent {
+        overflow: auto;
+    }
+}
 
 @media (min-width: 1200px) {
     .header .menu .menuList li a {
@@ -845,11 +871,8 @@ textarea:-webkit-autofill {
     
 
     .main .servicesBlock {
-        padding-top: 260px;
-        margin-top: -210px;
-    }
-    .main .servicesBlock .backgroundTxt {
-        padding-top: 420px;
+        padding-top: 180px;
+        margin-top: -110px;
     }
 } 
 
@@ -859,3 +882,5 @@ textarea:-webkit-autofill {
     }
     
 } 
+
+
