@@ -30,6 +30,9 @@ h2 {
 h2 {
     font-size: 1.7rem;
 }
+.bckg-col-wht {
+    background-color: white;
+}
 .backgroundTxt {
     display: none;
 }
@@ -273,12 +276,12 @@ h2 {
     min-height: 550px;
     max-height: 550px;
     border-radius: 48px;
-    box-sizing: border-box; 
-    border: 16px solid #ebf0f4;
+    box-sizing: border-box;
+    border: 7px solid #ebf0f4;
     background-color: #dfe6ed;
     overflow: hidden;
-    box-shadow: 16px 16px 48px #2e364330; 
-    font-family: monospace; 
+    box-shadow: 16px 16px 48px #2e364330;
+    font-family: monospace;
     margin: 0 auto;
 }
 .servicesBlock .popup .tabs{
@@ -303,7 +306,8 @@ h2 {
     user-select: none;
     margin-left: 15px;
     height: 30%;
-    word-break: break-all;
+    word-break: keep-all;
+    padding-right: 7px;
 }
 .servicesBlock .popup .tabs input[type="radio"]{
     display: none;
@@ -359,7 +363,7 @@ h2 {
 }
 .servicesBlock .popup .tabsContent h4 {
     color: #000;
-    word-break: break-all;
+    word-break: keep-all;
     font-size: 1.5rem;
     margin-bottom: 5px;
 }
@@ -640,6 +644,12 @@ textarea:-webkit-autofill {
 
 }
 
+@media (min-width: 450px) {    
+    .servicesBlock .popup {
+        border: 16px solid #ebf0f4;
+    }
+}
+
 @media (min-width: 520px) {
     .header .menu .menuList {
         padding: 0 25px;
@@ -882,5 +892,3 @@ textarea:-webkit-autofill {
     }
     
 } 
-
-
