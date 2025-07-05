@@ -65,7 +65,6 @@ function tab() {
             tabLink.addEventListener("change", () => activateTab(index));
         });
     
-        // Активируем первую вкладку при загрузке
         activateTab(0);
     });
 }
